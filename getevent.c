@@ -6,11 +6,12 @@
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <sys/inotify.h>
-#include <sys/limits.h>
+#include <limits.h>
 #include <sys/poll.h>
 #include <linux/input.h>
 #include <errno.h>
 #include <unistd.h>
+#include <time.h>
 
 struct label {
     const char *name;
@@ -512,7 +513,7 @@ static void usage(char *name)
     fprintf(stderr, "    -r: print rate events are received\n");
 }
 
-int getevent_main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int c;
     int i;
