@@ -1,5 +1,5 @@
 getevent: getevent.c | input.h-labels.h
-	arm-linux-gnueabihf-gcc -o $@ $<
+	$(CROSS_COMPILE)gcc -o $@ $<
 
 input.h-labels.h:
 	./generate-input.h-labels.py > $@
