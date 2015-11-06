@@ -5,4 +5,4 @@ input.h-labels.h:
 	./generate-input.h-labels.py > $@
 
 clean:
-	rm getevent input.h-labels.h
+	-rm -f getevent input.h-labels.h
