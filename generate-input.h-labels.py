@@ -36,7 +36,7 @@ ff_list = []
 
 r = re.compile(r'#define\s+(\S+)\s+((?:0x)?\d+)')
 
-with open('/usr/include/linux/input.h', 'r') as f:
+with open('/usr/arm-linux-gnueabihf/include/linux/input.h', 'r') as f:
   for line in f:
     m = r.match(line)
     if m:

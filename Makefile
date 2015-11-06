@@ -1,8 +1,8 @@
 getevent: getevent.c | input.h-labels.h
-	gcc -o $@ $<
+	$(CROSS_COMPILE)gcc -o $@ $<
 
 input.h-labels.h:
 	./generate-input.h-labels.py > $@
 
 clean:
-	rm getevent input.h-labels.h
+	-rm -f getevent input.h-labels.h
